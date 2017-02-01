@@ -1,0 +1,13 @@
+01/02/2016:
+Four activities with navigation.
+
+Pass data among the setting to Home , for future MQTT implementation with editable settings.
+                            public void onClick(View view) {
+
+                                                                           System.out.println("Settings msg"+ portField.getText());
+                                                                          ii.putExtra("quality", connection.getQuality());
+                                                                          ii.putExtra("port", connection.getPort());
+                                                                          ii.putExtra("quality", "newTemperature");
+                                                                          ii.putExtra("broker", connection.getBroker());
+                                                                          startActivity(ii);
+                                                                      }

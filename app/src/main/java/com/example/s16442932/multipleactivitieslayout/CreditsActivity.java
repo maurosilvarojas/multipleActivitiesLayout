@@ -1,45 +1,17 @@
 package com.example.s16442932.multipleactivitieslayout;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 
-public class HomeActivity extends AppCompatActivity{
+public class CreditsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
-
-        TextView maintext =(TextView)findViewById(R.id.mainText);
-        TextView topicText = (TextView)findViewById(R.id.topicText);
-        TextView portText = (TextView)findViewById(R.id.portText);
-        TextView brokerText = (TextView)findViewById(R.id.brokerText);
-
-
-
-        Bundle extras = getIntent().getExtras();
-        if (extras != null) {
-            final Connection connection=new Connection();
-            connection.setBroker(extras.getString("broker"));
-            connection.setPort(extras.getString("port"));
-            connection.setQuality(extras.getString("quality"));
-            System.out.println("WHAT********"+connection.getBroker().toString());
-
-
-            maintext.setText(connection.getBroker());
-            topicText.setText("Some topic");
-            portText.setText(connection.getPort());
-            brokerText.setText(connection.getBroker());
-
-            //The key argument here must match that used in the other activity
-        }
-
-
-
+        setContentView(R.layout.activity_credits);
     }
 
     @Override
