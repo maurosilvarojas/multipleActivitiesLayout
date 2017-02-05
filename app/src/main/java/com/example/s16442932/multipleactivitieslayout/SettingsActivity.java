@@ -34,6 +34,8 @@ public class SettingsActivity extends AppCompatActivity {
                                               ii.putExtra("quality", "newTemperature");
                                               ii.putExtra("broker", connection.getBroker());
                                               startActivity(ii);
+                                              //shared  https://developer.android.com/training/basics/data-storage/shared-preferences.html 
+                                              //onSaveInstanceState-- bundle
                                           }
                                       }
         );
